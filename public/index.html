@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+    <title>Weather</title>
+    <meta charset = "UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+
+    <!-- JS -->
+    <script src="p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="main.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121318182-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-121318182-1');
+    </script>
+</head>
+<body class="w3-midnight-blue">
+    <div class="w3-content">
+        <div class="w3-row w3-card-4 w3-margin w3-wet-asphalt">
+            <image class="w3-half" src="sunset.jpeg" style="height: inherit"></image>
+
+            <div class="w3-rest w3-container">
+                <input class="w3-input w3-border w3-margin-top" id="city" type="text" placeholder="City">
+                <br>
+                <input class="w3-input w3-border" id="country" type="text" placeholder="Country">
+                <br>
+                <button class="w3-button w3-red w3-block w3-margin-bottom" onclick="search()">Get Weather</button>
+            
+                <div class="w3-container">
+                    <div class="w3-margin-top w3-margin-bottom w3-border-bottom" id="temp">
+                        Temperature: {{ message }}
+                    </div>
+
+                    <div class="w3-margin-bottom w3-border-bottom" id="humidity">
+                        Humidity: {{ message }}
+                    </div>
+
+                    <div class="w3-margin-bottom w3-border-bottom" id="description">
+                        Forcast: {{ message }}
+                    </div>
+
+                    <div class="w3-margin-bottom w3-border-bottom" id="wind">
+                        Wind Speed: {{ message }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
